@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
 /* Box Model Hack */
 *{
   box-sizing: border-box;
@@ -40,10 +42,16 @@ header a {
   gap: 5px;
   margin-right: 15px;
   font-size: 2.2rem;
-  background: rgb(230, 95, 95);
+  background: rgb(217, 58, 58);
 }
 header a:hover {
   transform: scale(105%);
+}
+@media all and (min-width: 650px) {
+  header div {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 /* Main */
@@ -88,12 +96,19 @@ main + section {
   height: 100%;
   border-right: 1px solid #fff;
 }
+@media all and (min-width: 650px) {
+  main section {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 /* Projects */
 .projects {
  height: 50vh;
  display: flex;
  flex-direction: column;
- justify-content: center;
+ justify-content: space-evenly;
  align-items: center;
 }
 .projects > ul {
@@ -102,7 +117,7 @@ main + section {
 }
 .projects > ul > li {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, .3);
   border-radius: 10px;
 }
@@ -114,7 +129,12 @@ main + section {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+.cardInfo {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .projects ul li ul {
   display: flex;
@@ -134,7 +154,7 @@ main + section {
   background: rgb(28, 29, 37);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .skills ul {
@@ -163,31 +183,20 @@ main + section {
 
 /* Attribution */
 .attribution {
-  height: 15vh;
   background: rgb(28, 29, 37);
 }
 .attribution > div:first-of-type {
   width: 90%;
   margin: 0 auto;
+  padding: 25px 0;
   border-top: 1px solid #fff;
-  display: flex;
-}
-.attribution div div:first-of-type {
-  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-size: 1.6rem;
 }
-.attribution div div:last-of-type {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-grow: 1;
-}
-.attribution span {
-  transform: rotate(270deg);
-  color: #fff;
-  display: inline-block;
+.attribution a {
+  color: #A8A8A8;
 }
 
 /* TYPOGRAPHY */
@@ -212,10 +221,9 @@ h3 {
   color: rgb(28, 29, 37);
   margin-left: 15px;
 }
-h6 {
-  padding-top: 15px;
-  font-size: 1.2rem;
-  color: #fff;
+h4 {
+  font-size: 1.8rem;
+  color: #A8A8A8;
 }
 p {
   font-size: 2.2rem;
@@ -231,29 +239,12 @@ p {
   font-size: 1.8rem;
 }
 /* IMAGES & ICONS */
-svg {
-  height: 64px;
-  fill: #fff;
-}
-svg circle {
-  stroke: #fff;
-}
-.projects svg {
-  height: 3.6rem;
-  fill: rgb(28, 29, 37);
-}
-.adobeLogo {
-  transform: scale(135%);
-}
-.figmaLogo {
-  transform: scale(90%);
-}
-.projects svg circle {
-  stroke: rgb(28, 29, 37);
-}
+/* Header */
 header svg {
   height: 2.2rem;
 }
+
+/* Main */
 .avatarBG {
   width: 200px;
   height: 200px;
@@ -268,6 +259,21 @@ header svg {
   padding-bottom: 10%;
   padding-right: 15%;
 }
+@media all and (min-width: 650px) {
+  .avatarBG {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media all and (min-width: 1000px) {
+  .avatarBG {
+    width: 320px;
+    height: 320px;
+    padding-bottom: 0;
+  }
+}
+
+/* Projects */
 .projects img {
   width: 100%;
   height: 70%;
@@ -275,4 +281,43 @@ header svg {
   object-position: center top;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.projects svg {
+  height: 3.6rem;
+  fill: rgb(28, 29, 37);
+}
+.projects svg circle {
+  stroke: rgb(28, 29, 37);
+}
+
+/* Skills */
+svg {
+  height: 64px;
+  fill: #fff;
+}
+svg circle {
+  stroke: #fff;
+}
+.adobeLogo {
+  transform: scale(135%);
+}
+.figmaLogo {
+  transform: scale(90%);
+}
+.resolveLogo:hover {
+  fill: rgb(217, 58, 58);
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: resolveRotation;
+}
+@keyframes resolveRotation {
+  from{
+    transform: rotateZ(1deg) scale(100%);
+  }
+  50% {
+    transform: rotateZ(180deg) scale(110%);
+  }
+  to {
+    transform: rotateZ(359deg) scale(100%);
+  }
 }
