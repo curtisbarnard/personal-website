@@ -97,9 +97,19 @@ main + section {
   border-right: 1px solid #fff;
 }
 @media all and (min-width: 650px) {
+  main {
+    flex-direction: row;
+  }
   main section {
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
+    max-width: 500px;
+  }
+  main section:first-of-type {
+    justify-content: flex-end;
+  }
+  main section:last-of-type {
+    align-items: flex-start;
+    max-width: 500px;
   }
 }
 
