@@ -105,15 +105,24 @@ main + section {
 
 /* Projects */
 .projects {
- height: 50vh;
+ height: 100vh;
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
  align-items: center;
 }
+.projects > h2 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .projects > ul {
   width: 90%;
+  flex-grow: 3;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .projects > ul > li {
   width: 100%;
@@ -143,8 +152,18 @@ main + section {
 }
 
 @media all and (min-width: 650px) {
+  .projects {
+    height: 70vh;
+  }
   .projects > ul {
-    max-width: 550px;
+    max-width: 1400px;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+  }
+  .projects > ul > li {
+    flex-basis: 40%;
   }
 }
 
