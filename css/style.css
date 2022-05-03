@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -57,7 +57,7 @@ header a:hover {
 /* Main */
 main {
   height: 70vh;
-  background: rgb(28, 29, 37); 
+  background: rgb(28, 29, 37);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -112,14 +112,35 @@ main + section {
     max-width: 500px;
   }
 }
+/* About Me */
+.about-me {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me h2 {
+  width: 90%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.about-me p {
+  width: 90%;
+}
+@media all and (min-width: 650px) {
+  .about-me p {
+    max-width: 700px;
+  }
+}
 
 /* Projects */
 .projects {
- height: 100vh;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(169, 188, 208);
 }
 .projects > h2 {
   flex-grow: 1;
@@ -137,13 +158,14 @@ main + section {
 .projects > ul > li {
   width: 100%;
   height: 35vh;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  background: #fff;
 }
 .projects > ul > li:hover {
   transform: scale(101%);
 }
-.projects > ul > li a{
+.projects > ul > li a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -225,7 +247,7 @@ main + section {
   font-size: 1.6rem;
 }
 .attribution a {
-  color: #A8A8A8;
+  color: #a8a8a8;
 }
 
 /* TYPOGRAPHY */
@@ -238,7 +260,7 @@ h1 span {
 h2 {
   font-size: 3.6rem;
   font-weight: 700;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: rgb(28, 29, 37);
 }
 .skills h2 {
@@ -252,16 +274,16 @@ h3 {
 }
 h4 {
   font-size: 1.8rem;
-  color: #A8A8A8;
+  color: #a8a8a8;
 }
 p {
   font-size: 2.2rem;
 }
 .scroll a {
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 .scroll a:hover {
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 .skills span {
   color: #fff;
@@ -340,7 +362,7 @@ svg circle {
   animation-name: resolveRotation;
 }
 @keyframes resolveRotation {
-  from{
+  from {
     transform: rotateZ(1deg) scale(100%);
   }
   50% {
