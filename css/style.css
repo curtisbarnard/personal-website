@@ -201,7 +201,7 @@ main + section {
 
 /* Skills */
 .skills {
-  height: 50vh;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -209,14 +209,13 @@ main + section {
 }
 .skills ul {
   width: 90%;
-  height: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
 }
 .skills li {
-  flex-basis: 30%;
+  flex-basis: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -224,7 +223,6 @@ main + section {
 }
 @media all and (min-width: 650px) {
   .skills {
-    height: 30vh;
   }
   .skills > ul {
     max-width: 550px;
@@ -305,6 +303,7 @@ p {
 /* Header */
 header svg {
   height: 2.2rem;
+  fill: #fff;
 }
 
 /* Main */
@@ -345,16 +344,19 @@ header svg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.projects img[src$='svg'],
 .projects svg {
   height: 3.6rem;
-  fill: rgb(28, 29, 37);
+  width: auto;
+  border-radius: 0px;
 }
 .projects svg circle {
   stroke: rgb(28, 29, 37);
 }
 
 /* Skills */
-svg {
+svg,
+img {
   height: 64px;
   fill: rgb(28, 29, 37);
 }
@@ -366,6 +368,9 @@ svg circle {
 }
 .figmaLogo {
   transform: scale(90%);
+}
+.mongoDBLogo {
+  transform: scale(155%);
 }
 .resolveLogo:hover {
   fill: rgb(217, 58, 58);
