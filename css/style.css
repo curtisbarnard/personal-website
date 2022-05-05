@@ -247,11 +247,44 @@ main + section {
   flex-direction: column;
   align-items: center;
 }
+.contact p {
+  width: 90%;
+}
 .contact h2,
 .contact p {
   max-width: 650px;
 }
-
+.contact ul {
+  padding-top: 30px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+}
+.contact a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media all and (min-width: 650px) {
+  .contact ul {
+    max-width: 550px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (min-width: 1024px) {
+  .contact {
+    padding: 100px 0;
+  }
+  .contact h2 {
+    padding-bottom: 40px;
+  }
+  .contact ul {
+    padding-top: 40px;
+    max-width: 750px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
 /* Attribution */
 .attribution {
   background: rgb(28, 29, 37);
@@ -310,6 +343,10 @@ p {
 }
 .skills span {
   color: rgb(28, 29, 37);
+  font-size: 1.8rem;
+}
+.contact ul {
+  color: #fff;
   font-size: 1.8rem;
 }
 
@@ -393,4 +430,10 @@ img {
   to {
     transform: rotateZ(359deg) scale(100%);
   }
+}
+
+/* Contact */
+
+.contact img {
+  height: 48px;
 }
