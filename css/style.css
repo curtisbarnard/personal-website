@@ -404,7 +404,7 @@ header svg {
 }
 
 /* Skills */
-img {
+.skills img {
   height: 64px;
   fill: rgb(28, 29, 37);
 }
