@@ -289,7 +289,7 @@ main + section {
 .attribution {
   background: rgb(28, 29, 37);
 }
-.attribution > div:first-of-type {
+.attribution > div {
   width: 90%;
   margin: 0 auto;
   padding: 25px 0;
@@ -298,9 +298,6 @@ main + section {
   flex-direction: column;
   justify-content: space-around;
   font-size: 1.6rem;
-}
-.attribution a {
-  color: #a8a8a8;
 }
 
 /* TYPOGRAPHY */
@@ -322,15 +319,17 @@ h2 {
 .contact p {
   color: #fff;
 }
+.attribution h2 {
+  color: hsl(209, 24%, 65%);
+  font-size: 1.8rem;
+  text-align: left;
+  padding-bottom: 0;
+}
 h3 {
   font-size: 2.2rem;
   font-weight: 700;
   color: rgb(28, 29, 37);
   margin-left: 15px;
-}
-h4 {
-  font-size: 1.8rem;
-  color: #a8a8a8;
 }
 p {
   font-size: 2.2rem;
@@ -348,6 +347,9 @@ p {
 .contact ul {
   color: #fff;
   font-size: 1.8rem;
+}
+.attribution a {
+  color: hsl(209, 24%, 65%);
 }
 
 /* IMAGES & ICONS */
@@ -438,7 +440,6 @@ img {
   height: 48px;
 }
 
-/* TODO fix attribution footer spacing on mobile */
 /* TODO fix illustration sizing, currently squashed */
 /* TODO fix my work layout */
 /* TODO add onsenDB */
