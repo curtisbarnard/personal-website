@@ -38,6 +38,7 @@ header div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 header a {
   border-radius: 5px;
@@ -447,5 +448,56 @@ header img {
   height: 48px;
 }
 
+/* Coffee Chat Pop Up */
+.overlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.coffee-popup {
+  margin: 0 1rem;
+  max-width: 40rem;
+  background: var(--white);
+  color: var(--dark-blue);
+  border-radius: 0.5rem;
+  padding: 0 1rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-popup p {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+}
+
+.coffee-popup a,
+.coffee-popup a:visited {
+  color: var(--dark-red);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.coffee-popup .close,
+.coffee-popup .close:visited {
+  font-size: 4rem;
+  align-self: flex-end;
+  text-decoration: none;
+}
 /* TODO refactor */
 /* TODO circle BG color change on scroll */
