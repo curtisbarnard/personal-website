@@ -8,6 +8,7 @@
 
 /* Base Styles */
 :root {
+<<<<<<< HEAD
   --dark-blue: rgb(28, 29, 37);
   --light-blue: rgb(169, 188, 208);
   --grey-blue: hsl(209, 24%, 65%);
@@ -15,6 +16,14 @@
   --white: #ffffff;
 }
 
+=======
+  --dark-blue: #1c1d25;
+  --light-blue: #a9bcd0;
+  --grey-blue: #90a6bb;
+  --dark-red: #d93a3a;
+  --white: #ffffff;
+}
+>>>>>>> 55f110bc6dab03d8e7cef5aba1a1204b02fa60ba
 html {
   font-size: 62.5%;
 }
@@ -39,11 +48,11 @@ header div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 header a {
-  height: 35px;
-  width: 115px;
   border-radius: 5px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,11 +382,15 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .avatarBG img {
-  width: 115%;
-  padding-bottom: 10%;
-  padding-right: 15%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  /* padding-bottom: 10%;
+  padding-right: 15%; */
 }
 @media all and (min-width: 500px) {
   .avatarBG {
@@ -445,5 +458,56 @@ header img {
   height: 48px;
 }
 
+/* Coffee Chat Pop Up */
+.overlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.coffee-popup {
+  margin: 0 1rem;
+  max-width: 40rem;
+  background: var(--white);
+  color: var(--dark-blue);
+  border-radius: 0.5rem;
+  padding: 0 1rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-popup p {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+}
+
+.coffee-popup a,
+.coffee-popup a:visited {
+  color: var(--dark-red);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.coffee-popup .close,
+.coffee-popup .close:visited {
+  font-size: 4rem;
+  align-self: flex-end;
+  text-decoration: none;
+}
 /* TODO refactor */
 /* TODO circle BG color change on scroll */
