@@ -8,22 +8,12 @@
 
 /* Base Styles */
 :root {
-<<<<<<< HEAD
-  --dark-blue: rgb(28, 29, 37);
-  --light-blue: rgb(169, 188, 208);
-  --grey-blue: hsl(209, 24%, 65%);
-  --dark-red: rgb(217, 58, 58);
-  --white: #ffffff;
-}
-
-=======
   --dark-blue: #1c1d25;
   --light-blue: #a9bcd0;
   --grey-blue: #90a6bb;
   --dark-red: #d93a3a;
   --white: #ffffff;
 }
->>>>>>> 55f110bc6dab03d8e7cef5aba1a1204b02fa60ba
 html {
   font-size: 62.5%;
 }
