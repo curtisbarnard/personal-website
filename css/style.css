@@ -371,11 +371,15 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .avatarBG img {
-  width: 115%;
-  padding-bottom: 10%;
-  padding-right: 15%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  /* padding-bottom: 10%;
+  padding-right: 15%; */
 }
 @media all and (min-width: 500px) {
   .avatarBG {
