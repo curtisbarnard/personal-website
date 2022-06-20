@@ -7,6 +7,13 @@
 }
 
 /* Base Styles */
+:root {
+  --dark-blue: #1c1d25;
+  --light-blue: #a9bcd0;
+  --grey-blue: #90a6bb;
+  --dark-red: #d93a3a;
+  --white: #ffffff;
+}
 html {
   font-size: 62.5%;
 }
@@ -15,7 +22,7 @@ body {
   line-height: 1.4;
 }
 a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -23,26 +30,26 @@ a {
 /* Header */
 header {
   height: 75px;
-  background: rgb(28, 29, 37);
-  color: #fff;
+  background: var(--dark-blue);
+  color: var(--white);
 }
 header div {
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 header a {
-  height: 35px;
-  width: 115px;
   border-radius: 5px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   margin-right: 15px;
   font-size: 2.2rem;
-  background: rgb(217, 58, 58);
+  background: var(--dark-red);
 }
 header a:hover {
   transform: scale(105%);
@@ -57,8 +64,8 @@ header a:hover {
 /* Main */
 main {
   height: 70vh;
-  background: rgb(28, 29, 37);
-  color: #fff;
+  background: var(--dark-blue);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,8 +87,8 @@ main section:last-of-type {
 }
 main + section {
   height: 30vh;
-  background: rgb(28, 29, 37);
-  color: #fff;
+  background: var(--dark-blue);
+  color: var(--white);
   font-size: 1.8rem;
 }
 .scroll {
@@ -94,7 +101,7 @@ main + section {
 }
 .scrollLine {
   height: 100%;
-  border-right: 1px solid #fff;
+  border-right: 1px solid var(--white);
 }
 @media all and (min-width: 1024px) {
   main {
@@ -142,7 +149,7 @@ main + section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(169, 188, 208);
+  background: var(--light-blue);
 }
 .projects > ul {
   width: 90%;
@@ -155,7 +162,7 @@ main + section {
   height: 300px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  background: #fff;
+  background: var(--white);
 }
 .projects > ul > li:hover {
   transform: scale(101%);
@@ -239,7 +246,7 @@ main + section {
 
 /* Get in Touch */
 .contact {
-  background: rgb(28, 29, 37);
+  background: var(--dark-blue);
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -285,13 +292,13 @@ main + section {
 }
 /* Attribution */
 .attribution {
-  background: rgb(28, 29, 37);
+  background: var(--dark-blue);
 }
 .attribution > div {
   width: 90%;
   margin: 0 auto;
   padding: 25px 0;
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -309,16 +316,16 @@ h2 {
   font-size: 3.6rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  color: rgb(28, 29, 37);
+  color: var(--dark-blue);
   padding-bottom: 20px;
   text-align: center;
 }
 .contact h2,
 .contact p {
-  color: #fff;
+  color: var(--white);
 }
 .attribution h2 {
-  color: hsl(209, 24%, 65%);
+  color: var(--grey-blue);
   font-size: 1.8rem;
   text-align: left;
   padding-bottom: 0;
@@ -326,7 +333,7 @@ h2 {
 h3 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: rgb(28, 29, 37);
+  color: var(--dark-blue);
   margin-left: 15px;
 }
 p {
@@ -339,38 +346,41 @@ p {
   letter-spacing: 0.2rem;
 }
 .skills span {
-  color: rgb(28, 29, 37);
+  color: var(--dark-blue);
   font-size: 1.8rem;
 }
 .contact ul {
-  color: #fff;
+  color: var(--white);
   font-size: 1.8rem;
 }
 .attribution a {
-  color: hsl(209, 24%, 65%);
+  color: var(--grey-blue);
 }
 
 /* IMAGES & ICONS */
 /* Header */
-header svg {
+header img {
   height: 2.2rem;
-  fill: #fff;
 }
 
 /* Main */
 .avatarBG {
   width: 200px;
   height: 200px;
-  background: rgb(169, 188, 208);
+  background: var(--light-blue);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .avatarBG img {
-  width: 115%;
-  padding-bottom: 10%;
-  padding-right: 15%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  /* padding-bottom: 10%;
+  padding-right: 15%; */
 }
 @media all and (min-width: 500px) {
   .avatarBG {
@@ -404,7 +414,7 @@ header svg {
 /* Skills */
 .skills img {
   height: 64px;
-  fill: rgb(28, 29, 37);
+  fill: var(--dark-blue);
 }
 .adobeLogo {
   transform: scale(135%);
@@ -438,4 +448,56 @@ header svg {
   height: 48px;
 }
 
+/* Coffee Chat Pop Up */
+.overlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.coffee-popup {
+  margin: 0 1rem;
+  max-width: 40rem;
+  background: var(--white);
+  color: var(--dark-blue);
+  border-radius: 0.5rem;
+  padding: 0 1rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-popup p {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+}
+
+.coffee-popup a,
+.coffee-popup a:visited {
+  color: var(--dark-red);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.coffee-popup .close,
+.coffee-popup .close:visited {
+  font-size: 4rem;
+  align-self: flex-end;
+  text-decoration: none;
+}
 /* TODO refactor */
+/* TODO circle BG color change on scroll */
