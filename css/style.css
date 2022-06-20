@@ -8,13 +8,12 @@
 
 /* Base Styles */
 :root {
-  --dark-blue: rgb(28, 29, 37);
-  --light-blue: rgb(169, 188, 208);
-  --grey-blue: hsl(209, 24%, 65%);
-  --dark-red: rgb(217, 58, 58);
+  --dark-blue: #1c1d25;
+  --light-blue: #a9bcd0;
+  --grey-blue: #90a6bb;
+  --dark-red: #d93a3a;
   --white: #ffffff;
 }
-
 html {
   font-size: 62.5%;
 }
@@ -41,9 +40,8 @@ header div {
   align-items: center;
 }
 header a {
-  height: 35px;
-  width: 115px;
   border-radius: 5px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
