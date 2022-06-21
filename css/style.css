@@ -476,7 +476,7 @@ header img {
   background: var(--white);
   color: var(--dark-blue);
   border-radius: 0.5rem;
-  padding: 0 1rem 3rem 3rem;
+  padding: 0.5rem 1rem 3rem 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -493,11 +493,12 @@ header img {
   text-decoration: underline;
 }
 
-.coffee-popup .close,
-.coffee-popup .close:visited {
-  font-size: 4rem;
+.coffee-popup .close {
   align-self: flex-end;
-  text-decoration: none;
+}
+
+.coffee-popup img {
+  height: 3rem;
 }
 /* TODO refactor */
 /* TODO circle BG color change on scroll */
