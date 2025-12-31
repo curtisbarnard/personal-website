@@ -13,9 +13,6 @@
   --grey-blue: #90a6bb;
   --white: #ffffff;
 }
-html {
-  font-size: 62.5%;
-}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.4;
@@ -54,7 +51,7 @@ main + section {
   height: 30vh;
   background: var(--dark-blue);
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 .scroll {
   height: 100%;
@@ -115,7 +112,8 @@ main + section {
   flex-direction: column;
 }
 .cardInfo {
-  height: 30%;
+  height: 35%;
+  padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -201,20 +199,19 @@ main + section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
 }
 
 /* TYPOGRAPHY */
 h1 {
-  font-size: 4rem;
+  font-size: 2.2rem;
 }
 h1 span {
   font-weight: 700;
 }
 h2 {
-  font-size: 3.6rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
   color: var(--dark-blue);
   padding-bottom: 20px;
   text-align: center;
@@ -225,18 +222,21 @@ h2 {
 }
 .attribution h2 {
   color: var(--grey-blue);
-  font-size: 1.8rem;
+  font-size: 1rem;
   text-align: left;
   padding-bottom: 0;
 }
 h3 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--dark-blue);
-  margin-left: 15px;
 }
 p {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
+}
+.projects p {
+  color: var(--dark-blue);
+  font-size: 1rem;
 }
 .scroll a {
   letter-spacing: 0.1rem;
@@ -246,7 +246,7 @@ p {
 }
 .contact ul {
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 .attribution a {
   color: var(--grey-blue);
@@ -294,11 +294,6 @@ p {
   object-position: center top;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-.projects img[src$='svg'] {
-  height: 3.6rem;
-  width: auto;
-  border-radius: 0px;
 }
 
 /* Contact */
